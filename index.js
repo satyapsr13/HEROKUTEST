@@ -1,8 +1,12 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT  
+const port = process.env.PORT||1000
+const data = require("./data.json")
+app.get('/', (req, res) => {
+    res.json(data);
+    console.log(data);
 
-app.get('/', (req, res) => res.send('Hello Wodsfdfgsgrld!'))
+})
 
 console.log("------------------------------");
 console.log(process.env.PORT);
