@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
 });
 app.get('/letsplay', (req, res) => {
     res.writeHead(200, {
-        'Content-Length': Buffer.byteLength(body),
-        'Content-Type': 'application/jsonh'
+        // 'Content-Length': Buffer.byteLength(body),
+        'Content-Type': 'application/json'
     });
     res.json({
         "lets": "play",
