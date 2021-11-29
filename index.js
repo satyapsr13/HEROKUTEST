@@ -4,8 +4,8 @@ const port = process.env.PORT || 1000
 const data = require("./data.json")
 app.get('/', (req, res) => {
     res.writeHead(200, {
-        'Content-Length': Buffer.byteLength(body),
-        'Content-Type': 'json'
+        // 'Content-Length': Buffer.byteLength(body),
+        'Content-Type': 'application/json'
     });
 
     res.json(data);
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 app.get('/letsplay', (req, res) => {
     res.writeHead(200, {
         'Content-Length': Buffer.byteLength(body),
-        'Content-Type': 'json'
+        'Content-Type': 'application/json'
     });
     res.json({
         "lets": "play",
